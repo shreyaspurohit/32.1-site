@@ -1,0 +1,181 @@
+<html>
+<head>
+  <style type="text/css">
+
+  body {
+    background: #e2e2e2; /* Old browsers */
+    background: rgb(245,246,246); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .the_site_name h1 {
+    font-size: 12em;
+    font-family: system-ui;
+    overflow: hidden;
+    border-right: .15em solid #7d7e7d; /* cursor */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.08em;
+    animation:
+      typing 2.5s steps(4, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  #pre-dot {
+    background: url(./images/green.png) no-repeat center center;
+	  background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #dot {
+    background: url(./images/red.jpg) no-repeat center center;
+	  background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dot-flicker 3s linear infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 92% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #7d7e7d }
+  }
+
+  @keyframes dot-flicker {
+    0% {
+      opacity:0.1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    2% {
+      opacity:0.1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    4% {
+      opacity:1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    19% {
+      opacity:1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    21% {
+      opacity:0.1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    23% {
+      opacity:1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    80% {
+      opacity:1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    83% {
+      opacity:0.4;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+    89% {
+      opacity:1;
+      text-shadow: 0px 0px 50px rgba(242, 22, 22, 1);
+    }
+  }
+
+  .about, .home {
+    position: fixed;
+    bottom: 0;
+    width: 15%;
+    background: #0070FF;
+    line-height: 2;
+    text-align: center;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #84BAFF;
+    box-shadow: 0 0 15px #00214B;
+    z-index: 3;
+  }
+  .home {
+    left: 34%;
+  }
+  .about {
+    left: 50%;
+  }
+  .a-about, .a-home {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      color:#000;
+  }
+  .about:hover,.about:visited,.home:hover,.home:visited { color:#000; }
+  .about-panel {
+    min-width: 100%;
+  	height: 98%;
+  	overflow-y: auto;
+  	overflow-x: hidden;
+  	margin-top: -150%;
+  	position: absolute;
+  	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+
+    background: rgb(222,239,255); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(222,239,255,1) 0%, rgba(152,190,222,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deefff', endColorstr='#98bede',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    text-align: center;
+
+  	z-index: 2;
+  	-webkit-transition: all .8s ease-in-out;
+  	-moz-transition: all .8s ease-in-out;
+  	-o-transition: all .8s ease-in-out;
+  	transition: all .8s ease-in-out;
+  }
+  .about-panel:target{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+  	margin: 0%;
+  	background-color: #fffff0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .content p {
+    font-family: system-ui;
+    padding-left: 25%;
+    width: 50%;
+  }
+  </style>
+</head>
+<title>32.1</title>
+<body>
+  <div class="the_site_name">
+    <h1><span id="pre-dot">32</span><span id="dot">.1</span></h1>
+  </div>
+  <div class="about"><a href="#about" class="a-about">About</a></div>
+  <div class="home"><a href="#" class="a-home">Home</a></div>
+  <div id="about" class="about-panel">
+  	<div class="content">
+  		<h2>About</h2>
+  		<p>Early stage startup. 32F is the temperature at which water starts to freeze to ice when under a pressure of one atmosphere.
+        What happens if you increase the temperature by 0.1F to 32.1F? It's about to feel warm. Time to stir things up.
+      </p>
+      <p>
+        Have a good day.
+      </p>
+  	</div>
+  </div>
+</body>
+</html>
